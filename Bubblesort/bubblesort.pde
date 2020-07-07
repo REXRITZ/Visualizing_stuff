@@ -1,9 +1,8 @@
 float arr[];
 int i=0,j=0;
 void setup() {
-  //size(400,600);
-  fullScreen(P2D);
-  arr = new float[width];
+  size(1300,700);
+  arr = new float[width/10];
   for(int i=0;i<arr.length;i++){
     arr[i]=random(height);
   }
@@ -24,7 +23,7 @@ void draw() {
     noLoop();
    for(int in=0;in<arr.length;in++) {
     stroke(255);
-    line(in,height,in,height-arr[in]);
+    rect(in*10,height,10,-arr[in]);
   }
   i++;
 }

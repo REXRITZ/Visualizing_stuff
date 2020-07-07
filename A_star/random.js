@@ -99,6 +99,10 @@ function A_star() {
 	
 }
 
+function MakeStuff(i) {
+	vertex(path[i].i * w + w / 2, path[i].j * h + h / 2)
+}
+
 function DrawPath(current) {
     var temp = current;
 		path.push(temp);
@@ -112,7 +116,7 @@ function DrawPath(current) {
 		//strokeWeight(w / 2);
     beginShape();
   	for (var i = 0; i < path.length; i++) {
-			vertex(path[i].i * w + w / 2, path[i].j * h + h / 2);
+			setTimeout(MakeStuff(i),1000);
 		}
 		endShape();
 }
